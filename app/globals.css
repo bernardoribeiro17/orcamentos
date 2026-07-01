@@ -1,0 +1,64 @@
+/*
+ * Estilos globais da aplicação.
+ *
+ * Aqui só importamos o CSS do Bootstrap (já instalado como dependência) para
+ * você ter um ponto de partida com classes utilitárias (btn, form-control,
+ * container, row/col, etc.). Documentação: https://getbootstrap.com/docs/5.3/
+ *
+ * A PARTIR DAQUI O ESTILO É SEU: crie suas variáveis de cor, tipografia e
+ * classes próprias abaixo, ou use CSS Modules (arquivo `*.module.css` ao lado
+ * de cada página/componente). Sinta-se livre para remover o Bootstrap se
+ * preferir estilizar do zero.
+ */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Escreva seus estilos globais abaixo */
+
+:root {
+  --cor-primaria: #1e40af;
+  --cor-primaria-escura: #1e3a8a;
+  --cor-destaque: #ea580c;
+}
+
+body {
+  background-color: #f3f4f6;
+}
+
+.auth-shell {
+  background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-primaria-escura) 100%);
+}
+
+/* moldura do sistema (header + nav + conteúdo + footer) */
+.system-header {
+  background-color: var(--cor-primaria);
+}
+
+.system-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.system-nav .nav-link {
+  color: #374151;
+  font-weight: 500;
+}
+
+.system-nav .nav-link.ativo {
+  color: var(--cor-primaria);
+  border-bottom: 2px solid var(--cor-destaque);
+}
+
+.system-main {
+  min-height: calc(100vh - 170px);
+}
+
+.card-kpi {
+  border: none;
+  border-left: 4px solid var(--cor-primaria);
+}
+
+.barra-grafico {
+  background-color: var(--cor-primaria);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.2s ease;
+}
